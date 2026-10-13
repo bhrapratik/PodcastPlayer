@@ -1,0 +1,43 @@
+# Android / Gradle / Kotlin
+*.iml
+.kotlin
+.gradle
+**/build/
+!src/**/build/
+local.properties
+captures
+.externalNativeBuild
+.cxx
+*.hprof
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Signing (never commit real credentials)
+*.jks
+*.keystore
+key.properties
+
+# IDE
+.idea
+.vscode
+out/
+
+# macOS
+.DS_Store
+
+# iOS / Xcode
+xcuserdata
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+DerivedData/
+*.xcuserstate
+Pods/
+.swiftpm
+
+node_modules/
