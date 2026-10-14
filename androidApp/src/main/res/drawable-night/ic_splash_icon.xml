@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="240"
+    android:viewportHeight="240">
+    <!-- Brand circle, matches PodcastLavender (dark theme primary) -->
+    <path
+        android:fillColor="#B8A5FF"
+        android:pathData="M120,0 A120,120 0 1,1 119.9,0 Z" />
+    <!-- Music note glyph, centered -->
+    <group
+        android:pivotX="0"
+        android:pivotY="0"
+        android:scaleX="4.1667"
+        android:scaleY="4.1667"
+        android:translateX="70"
+        android:translateY="70">
+        <path
+            android:fillColor="#27105F"
+            android:pathData="M12,3v10.55c-0.59,-0.34 -1.27,-0.55 -2,-0.55c-2.21,0 -4,1.79 -4,4s1.79,4 4,4s4,-1.79 4,-4V7h4V3H12z" />
+    </group>
+</vector>

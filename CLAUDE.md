@@ -64,6 +64,10 @@ Follow the existing `PodcastViewModel` pattern:
 ### Local persistence
 - Use Jetpack DataStore (`androidx.datastore:datastore-preferences`) for local key-value settings (see `ThemePreferenceStore` in `androidApp/settings`). Don't use `SharedPreferences` for new persistence.
 
+### Splash / launch screen
+- Android uses `androidx.core.splashscreen` (`Theme.App.Starting` in `res/values/themes.xml`, applied to `MainActivity` in the manifest, installed via `installSplashScreen()` as the first line of `onCreate()` before `super.onCreate()`). The icon (`drawable/ic_splash_icon.xml` + `drawable-night/` variant) and background (`values/colors.xml` + `values-night/`) are separate from the launcher icon — don't conflate the two.
+- iOS uses the `UILaunchScreen` Info.plist dictionary (`LaunchIcon` image + `LaunchBackground` color in `Assets.xcassets`), not a storyboard. `INFOPLIST_KEY_UILaunchScreen_Generation` must stay **off** in `project.pbxproj` — that build setting auto-generates a blank `UILaunchScreen` entry that conflicts with a custom one in `Info.plist`.
+
 ### Player
 - `PodcastPlayer`/`PodcastPlayerUiState` (Android) and `PodcastAudioPlayer`/`PodcastPlayerUiState` (iOS) are platform-only and independent of `PodcastUiState`. Don't route playback through `PodcastViewModel` on either platform.
 - Android's `PodcastPlayer` talks to `PlaybackService` (a `MediaSessionService`) via a `MediaController`, not a direct `ExoPlayer` reference — this is what keeps playback alive after the app is backgrounded/swiped away. iOS's `PodcastAudioPlayer` owns its `AVPlayer` directly since it has no equivalent background-service requirement yet.

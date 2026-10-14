@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Matches LightBackground in ui/theme/Color.kt -->
+    <color name="splash_background">#F8F7FC</color>
+</resources>

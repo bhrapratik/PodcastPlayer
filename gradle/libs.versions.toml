@@ -25,6 +25,7 @@ compose-material-icons = "1.7.8"
 navigationCompose = "2.10.2"
 xmlutil = "0.91.2"
 androidx-datastore = "1.1.1"
+androidx-splashscreen = "1.0.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -82,6 +83,9 @@ xmlutil-serialization = { module = "io.github.pdvrieze.xmlutil:serialization", v
 
 # Local persistence
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidx-datastore" }
+
+# Splash screen
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "androidx-splashscreen" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

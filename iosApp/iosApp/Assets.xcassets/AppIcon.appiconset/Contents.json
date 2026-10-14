@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "PodcastPlayer_iOS_AppIcon_1024.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "PodcastPlayer_iOS_AppIcon_1024 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
